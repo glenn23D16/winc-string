@@ -1,30 +1,26 @@
-#Part 1
+#part 1
+
 scorer_1 = "Ruud Gullit"
 scorer_2 = "Marco van Basten"
-goal_0 = str(32)
-goal_1 = str(54)
-scorers = scorer_1 + " " + goal_0, scorer_2 + " " + goal_1
+goal_0 = 32
+goal_1 = 54
+scorers = scorer_1 + " " + str(goal_0) + ", " + scorer_2 + " " + str(goal_1)
 print(scorers)
-report = scorer_1 + " scored in the " + goal_0 + "nd minute\n" + scorer_2 + " scored in the " + goal_1 + "th minute"
+report =  f"{scorer_1} scored in the {goal_0}nd minute\n{scorer_2} scored in the {goal_1}th minute" 
 print(report)
 
-#Part 2
+#part 2
+
 player = "Ruud Gullit"
-print(player[0:4])
-x = player.find("Ruud")
-print(x)
-first_name = player[0:4]
+first_name = player[0:player.find(" ")]
 print(first_name)
-x = player.find("Gullit")
-print(x)
-print(player[5:])
-print(len(player[5:]))
-last_name_len = player [5:]
-print(last_name_len)
-name_short = first_name[0] + ". " + last_name_len
+last_name = player[player.find(" ")-10:]
+print(last_name)
+last_name_len = len(player[player.find(" ")-10:])
+last_name_len
+name_short = first_name[0] + ". " + player[player.find(" ")-10:]
 print(name_short)
-chant = (first_name + "! ")* 3 + (first_name + "!")
+chant = (first_name + "! ") * (len(first_name)-1) +(first_name + "!")
 print(chant)
-good_chant = 3 != 4
-print(3 != 4)
-print(3 != 3)
+good_chant = (first_name + "! ") * (len(first_name)-1) +(first_name + "!") != (first_name + "! ") * (len(first_name)-1) +(first_name + "! ")
+print(good_chant)
